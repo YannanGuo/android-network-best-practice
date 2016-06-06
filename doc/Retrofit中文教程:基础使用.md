@@ -9,7 +9,7 @@ dependencies {
 ```
 
 
-'com.squareup.retrofit2:retrofit:2.0.0'底层已经使用okhttp来做网络请求,所以无需再配置okhttp。
+`com.squareup.retrofit2:retrofit:2.0.0`底层已经使用okhttp来做网络请求,所以无需再配置okhttp。
 
 `com.squareup.retrofit2:converter-gson:2.0.0`是用来做json反序列化的,我们同样也可以配置其他解析工具,如下所示:
 
