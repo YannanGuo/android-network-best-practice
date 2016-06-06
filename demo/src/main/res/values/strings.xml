@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">retrofit-plus</string>
+    <string name="query_phone">查询号码归属地</string>
 </resources>
