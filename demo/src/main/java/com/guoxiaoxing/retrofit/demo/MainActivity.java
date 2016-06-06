@@ -46,22 +46,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        PhoneService phoneService = retrofit.create(PhoneService.class);
-        Call<Phone> call = phoneService.getPhoneLocation(API_KEY, mEtQueryPhone.getText().toString());
-        call.enqueue(new Callback<Phone>() {
+        PhoneLocationService phoneLocationService = retrofit.create(PhoneLocationService.class);
+        Call<PhoneLocation> call = phoneLocationService.getResult(API_KEY, mEtQueryPhone.getText().toString());
+        call.enqueue(new Callback<PhoneLocation>() {
             @Override
-            public void onResponse(Call<Phone> call, Response<Phone> response) {
+            public void onResponse(Call<PhoneLocation> call, Response<PhoneLocation> response) {
 
                 if (response.isSuccessful()) {
-                    Phone phone = response.body();
-                    if (phone != null) {
-                        mTvShowResult.setText(phone.getRetData().getProvince() + "/" + phone.getRetData().getCity());
+                    PhoneLocation phoneLocation = response.body();
+                    if (phoneLocation != null) {
+                        mTvShowResult.setText(phoneLocation.getRetData().getProvince() + "/" + phoneLocation.getRetData().getCity());
                     }
                 }
             }
 
             @Override
-            public void onFailure(Call<Phone> call, Throwable t) {
+            public void onFailure(Call<PhoneLocation> call, Throwable t) {
                 Toast.makeText(MainActivity.this, t.getMessage().toString(), Toast.LENGTH_LONG).show();
 
             }
@@ -76,6 +76,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 queryPhoneLocation();
                 break;
         }
-
     }
 }

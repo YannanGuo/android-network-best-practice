@@ -4,7 +4,7 @@ package com.guoxiaoxing.retrofit.demo;
  * Created by guoxiaoxing on 16/6/6.
  */
 
-public class Phone {
+public class PhoneLocation {
 
     /**
      * errNum : 0
