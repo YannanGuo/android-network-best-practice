@@ -1,4 +1,4 @@
-package com.guoxiaoxing.retrofit.demo;
+package com.guoxiaoxing.retrofit.demo.model;
 
 /**
  * Created by guoxiaoxing on 16/6/6.

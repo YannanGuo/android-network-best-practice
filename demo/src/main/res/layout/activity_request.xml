@@ -5,26 +5,30 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guoxiaoxing.retrofit.demo.MainActivity">
+    tools:context=".request.GetRequestActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/tv_get_request"
+        <EditText
+            android:id="@+id/et_query_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/get_request"/>
+            android:inputType="phone"
+            tools:text="13800000000"/>
 
         <Button
-            android:id="@+id/tv_post_request"
+            android:id="@+id/btn_query_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/post_request"/>
+            android:text="@string/query_phone"/>
 
+        <TextView
+            android:id="@+id/tv_show_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
