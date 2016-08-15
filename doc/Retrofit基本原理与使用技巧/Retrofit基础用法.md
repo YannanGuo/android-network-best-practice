@@ -1,9 +1,21 @@
+# Retrofit基本使用
+
+Retrofit 是一个Square开发的类型安全的REST安卓客户端请求库。这个库为网络认证、API请求以及用OkHttp发送网络请求提供了强大的框架。
+
+> A type-safe HTTP client for Android and Java
+
+项目地址: https://github.com/square/retrofit
+
+官方例子: http://square.github.io/retrofit/
+
+
+
 添加依赖
 
 ```
 dependencies {
     // Retrofit & OkHttp
-    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0'
 }
 ```

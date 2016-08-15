@@ -41,7 +41,10 @@ public class GetRequestActivity extends AppCompatActivity implements View.OnClic
         mBtnQueryPhone.setOnClickListener(this);
     }
 
-    private void queryPhoneLocation() {
+    /**
+     * Retrofit结合RxJava执行网络请求
+     */
+    private void queryPhoneLocationRx() {
         PhoneLocationService phoneLocationService = RetrofitApplication.getRetrofit().create(PhoneLocationService.class);
         Call<PhoneLocation> call = phoneLocationService.getResult(RetrofitApplication.API_KEY, mEtQueryPhone.getText().toString());
         call.enqueue(new Callback<PhoneLocation>() {
@@ -58,7 +61,7 @@ public class GetRequestActivity extends AppCompatActivity implements View.OnClic
 
             @Override
             public void onFailure(Call<PhoneLocation> call, Throwable t) {
-                Toast.makeText(GetRequestActivity.this, t.getMessage().toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(GetRequestActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -69,8 +72,34 @@ public class GetRequestActivity extends AppCompatActivity implements View.OnClic
         int id = v.getId();
         switch (id) {
             case R.id.btn_query_phone:
-                queryPhoneLocation();
+                queryPhoneLocationNative();
                 break;
         }
+    }
+
+    /**
+     * Retrofit原生方式执行网络请求
+     */
+    private void queryPhoneLocationNative() {
+        PhoneLocationService phoneLocationService = RetrofitApplication.getRetrofit().create(PhoneLocationService.class);
+        Call<PhoneLocation> call = phoneLocationService.getResult(RetrofitApplication.API_KEY, mEtQueryPhone.getText().toString());
+        call.enqueue(new Callback<PhoneLocation>() {
+            @Override
+            public void onResponse(Call<PhoneLocation> call, Response<PhoneLocation> response) {
+
+                if (response.isSuccessful()) {
+                    PhoneLocation phoneLocation = response.body();
+                    if (phoneLocation != null) {
+                        mTvShowResult.setText(phoneLocation.getRetData().getProvince() + "/" + phoneLocation.getRetData().getCity());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PhoneLocation> call, Throwable t) {
+                Toast.makeText(GetRequestActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 }
