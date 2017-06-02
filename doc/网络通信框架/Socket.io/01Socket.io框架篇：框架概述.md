@@ -18,18 +18,17 @@
 Socket.io是一套由JavaScript实现，基于Node.js，支持WebSocket协议用于实时通信、跨平台的开源框架，它实现了实时、双向、基于事件的通讯机制，它解
 决了实时通信的问题，并统一了服务端与客户端的编程方式，当启动了Socket以后，服务端与客户端就建立了一条连接，两边可以互相通信。
 
-Socket.io支持的协议
+Socket.io支持的协议：
 
 ```
-- WebSocket通讯协议
-- Adobe Flash Socket
-- AJAX长轮询
-- AJAX multipart straming
-- 持久Iframe
-- JSONP轮询
+- Webocket
+- Adobe® Flash Socket
+- AJAX long polling
+- AJAX multipart streaming
+- Forever Iframe
+- JSONP Polling
 ```
 Socket.io可以根据浏览器对通讯机制的支持情况自动地选择最佳的方式来实现网络实时应用。
-
 
 Socket.io的功能模块：
 
@@ -45,3 +44,16 @@ Socket.io的功能模块：
 ```
 
 另外，Socket.io支持avaScript、PHP、Swift、Java、C++等多语言的实现。
+
+
+public Emitter on(String event, Listener fn)
+
+用来监听一个emit发射的事件，参数含义：
+
+```
+String event：事件类型
+Listener fn：监听器
+```
+
+public Emitter emit(String event, Object... args)
+
