@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-network-best-practice.iml" filepath="$PROJECT_DIR$/android-network-best-practice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network-programming.iml" filepath="$PROJECT_DIR$/network-programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/okhttp/okhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket.io/socket.io.iml" filepath="$PROJECT_DIR$/socket.io/socket.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket.io-android-chat/socket.io-android-chat.iml" filepath="$PROJECT_DIR$/socket.io-android-chat/socket.io-android-chat.iml" />
     </modules>
   </component>
 </project>

@@ -1,1 +1,1 @@
-include ':demo', ':network'
+include ':okhttp', ':network', ':socket.io', ':socket.io-android-chat'
