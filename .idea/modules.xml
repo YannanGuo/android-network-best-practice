@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-network-best-practice.iml" filepath="$PROJECT_DIR$/android-network-best-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-network/java-network.iml" filepath="$PROJECT_DIR$/java-network/java-network.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/network-programming.iml" filepath="$PROJECT_DIR$/network-programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/okhttp/okhttp.iml" />
